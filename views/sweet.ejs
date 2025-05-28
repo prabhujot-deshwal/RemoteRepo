@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sweets</title>
+</head>
+<body>
+  <h1>Available Sweets</h1>
+  <ul>
+    <% sweets.forEach(sweet => { %>
+      <li><%= sweet %></li>
+    <% }) %>
+  </ul>
+
+  <form action="/add" method="POST">
+    <input type="text" name="sweet" placeholder="Add new sweet" required />
+    <button type="submit">Add</button>
+  </form>
+
+  <a href="/">Back to Home</a>
+</body>
+</html>
